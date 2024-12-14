@@ -69,19 +69,19 @@ python -m torch.distributed.launch --nproc_per_node=4 tools/train.py configs/dis
 ### Results
 Object Detection:
 
-| **Teacher**          | **Student**           | **Baseline(mAP)** | **FourierKD(mAP)** |
-|:--------------------:|:---------------------:|:-----------------:|:------------------:|
-| RepPoints-ResNeXt101 | RepPoints-ResNet50    | 38.6%             | 42.8%              |
-| FasterRCNN-ResNet101 | FasterRCNN-ResNet50   | 38.4%             | 40.9%              |
-| RepPoints-ResNet50   | RetinaNet-ResNet18    | 31.7%             | 35.2%              |
-| RepPoints-ResNet50   | RetinaNet-MobileNetV2 | 28.5%             | 33.3%              |
+| **Teacher**          |        **Student**        | **Baseline(mAP)** | **FourierKD(mAP)** |
+|:--------------------:|:-------------------------:|:-----------------:|:------------------:|
+| RepPoints-ResNeXt101 |  RepPoints-ResNet50(2x)   | 38.6%             | 42.8%              |
+| FasterRCNN-ResNet101 |  FasterRCNN-ResNet50(2x)  | 38.4%             | 40.9%              |
+| RepPoints-ResNet50   |  RetinaNet-ResNet18(1x)   | 31.7%             | 35.2%              |
+| RepPoints-ResNet50   | RetinaNet-MobileNetV2(1x) | 28.5%             | 33.3%              |
 
 Semantic Segmentation:
 
-|   **Teacher**    |    **Student**     | **Baseline(mIoU)** | **FourierKD(mIoU)** |
-|:----------------:|:------------------:|:------------------:|:-------------------:|
-| PspNet-ResNet101 |  PspNet-ResNet18   |       69.85%       |       74.86%        |
-| PspNet-ResNet101 | DeeplabV3-ResNet18 |       73.20%       |       77.17%        | |
+|   **Teacher**    |       **Student**       | **Baseline(mIoU)** | **FourierKD(mIoU)** |
+|:----------------:|:-----------------------:|:------------------:|:-------------------:|
+| PspNet-ResNet101 |  PspNet-ResNet18(40k)   |       69.85%       |       74.86%        |
+| PspNet-ResNet101 | DeeplabV3-ResNet18(40k) |       73.20%       |       77.17%        | |
 
 
 ### Convert KD ckpt to student-only ckpt
