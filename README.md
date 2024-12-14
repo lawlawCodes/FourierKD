@@ -1,5 +1,6 @@
 ## [Knowledge Distillation in Fourier Frequency Domain for Dense Prediction](https://ieeexplore.ieee.org/document/10792928)
 
+
 ### Introduction
 
 This repository is the official implementation of: Knowledge Distillation in Fourier Frequency Domain for Dense Prediction.
@@ -54,6 +55,14 @@ python -m torch.distributed.launch --nproc_per_node=4 tools/train.py configs/dis
 ```
 
 ### Architectures
+
+<p align='center'>
+<img src='figures/architecture.jpg' alt='Architecture' width='700px'>
+</p>
+
+<p align='center'>
+<img src='figures/atfm.jpg' alt='ATFM' width='700px'>
+</p>
 
 
 
